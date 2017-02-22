@@ -1,50 +1,35 @@
-# dotfiles_221
+# dotfiles-x221
 
-Basic dotfiles repo using stow.
+Current dotfiles on my x221 laptop 
 
-This repo contains config files for
+### Info
 
-* bash
+wm: i3-gaps-git
 
-* fonts
+bar: i3bar w/ i3blocks-gaps-git
 
-* i3
+shell: zsh
 
-* mpdnotify
+editor: sublime3
 
-* nautilus
+terminal: xfce4-terminal+urxvt
 
-* oh-my-zsh (custom files)
+music player: ncmpcpp / cava
 
-* synaptic config
+compositor: compton
 
-* Xresources, Xdefaults
+### Scrots
+![scrot1] (scrot1.jpg)
+![scrot2] (scrot2.jpg)
 
-* cava
-
-* gtk-2.0 & 3.0
-
-* livestreamer
-
-* mps-youtube
-
-* ncmpcpp
-
-* ranger
-
-* tmux
-
-* zsh
-
-* compton
-
-* mpd
-
-* mpv
-
-* neofetch
-
-* sublime3 packages
-
-* xfce4 configs
-
+##### In the scrots
+* Scrot 1
+   * ncmpcpp + cava
+   
+   * xfce4-terminal + zsh + pure prompt
+   
+   * tmux
+   
+   
+* Scrot 2
+   * clean
