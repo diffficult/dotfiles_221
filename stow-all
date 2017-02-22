@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+set -e
+
+PROGRAMS=(bash fonts i3 mpdnotify nautilus oh-my-zsh synaptic xresources cava gtk-2.0 gtk-3.0 livestreamer mps-youtube ncmpcpp ranger tmux zsh compton mpd mpv neofetch sublime3 xfce4)
+
+for program in ${PROGRAMS[@]}; do
+  stow $program
+  echo "Configuring $program"
+done
+
+echo "Done!"
