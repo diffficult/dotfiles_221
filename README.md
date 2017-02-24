@@ -1,6 +1,6 @@
 # dotfiles-x221
 
-Current dotfiles on my x221 laptop 
+Current dotfiles and fonts on my x221 laptop 
 
 ### Info
 
