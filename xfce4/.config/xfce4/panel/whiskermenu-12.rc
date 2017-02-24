@@ -1,5 +1,5 @@
 favorites=exo-terminal-emulator.desktop,exo-file-manager.desktop,exo-mail-reader.desktop,exo-web-browser.desktop
-recent=org.gnome.DiskUtility.desktop,xfce-ui-settings.desktop,xfce4-power-manager-settings.desktop,sublime_text_3.desktop,xfce4-run.desktop,xfce-settings-manager.desktop,lightdm-gtk-greeter-settings.desktop,xfce-wm-settings.desktop,xfce-session-settings.desktop,xfce-wmtweaks-settings.desktop
+recent=system-config-printer.desktop,cups.desktop,xfce-wm-settings.desktop,xfce-ui-settings.desktop,lightdm-gtk-greeter-settings.desktop,chromium.desktop,dropbox.desktop,xfce4-power-manager-settings.desktop,sublime_text_3.desktop,xfce4-run.desktop
 button-title=Applications
 button-icon=view-app-grid-symbolic
 button-single-row=false
