@@ -164,7 +164,21 @@ bindsym $mod+d exec --no-startup-id rofi -show run -lines 3 -font "PragmataPro 1
 
 
 # Screenshot
-bindsym $mod+Shift+Print exec --no-startup-id "mkdir -p ~/Pictures/Screenshots && scrot -q 100 ~/Pictures/Screenshots/scrot-$(date +%Y-%m-%d_%H-%M-%S).jpg"
+#bindsym $mod+Shift+Print exec --no-startup-id "mkdir -p ~/Pictures/Screenshots && scrot -q 100 ~/Pictures/Screenshots/scrot-$(date +%Y-%m-%d_%H-%M-%S).jpg"
+#bindsym $mod+Shift+Print exec --no-startup-id "mkdir -p ~/Pictures/Screenshots && maim -m 10 ~/Pictures/Screenshots/scrot-$(date +%s).png.jpg"
+
+
+set $maimode "capture: [S]crot . scrot&[U]pload . scrot2[C]lipboard . scrot[A]rea"
+bindsym $mod+Shift+Print      mode $maimode
+mode $maimode {
+    bindsym s         exec --no-startup-id "mkdir -p ~/Pictures/Screenshots && maim -m 10 ~/Pictures/Screenshots/scrot-$(date +%s).png", mode "default"
+    bindsym u         exec --no-startup-id "mkdir -p ~/Pictures/Screenshots && maim -m 10 -s ~/Pictures/Screenshots/upload.png && imgur ~/Pictures/Screenshots/upload.png", mode "default"
+    bindsym c         exec --no-startup-id "mkdir -p ~/Pictures/Screenshots && maim -m 10 -s | xclip -selection clipboard -t", mode "default"
+    bindsym a         exec --no-startup-id "mkdir -p ~/Pictures/Screenshots && maim | feh - -x & maim -m 10 -s ~/Pictures/Screenshots/cropped-$(date +%s).png", mode "default"
+    bindsym Return    mode "default"
+    bindsym Escape    mode "default"
+}
+
 
 
 # Wallpaper Random Change
@@ -321,7 +335,7 @@ assign [class="mpv"] $workspace7
 assign [class="Gpicview"] $workspace6
 
 # Shutdown, Reboot, Lock Screen, and Logout #657b83 ---------------------------------------------------------------------------
-set $sysmenu "system:  [P]oweroff  [H]ibernate re[B]oot  [L]ock  logou[T] "
+set $sysmenu "system:  [P]oweroff  [H]ibernate re[B]oot  [L]ock  logou[T]"
 bindsym $mod+Shift+e      mode $sysmenu
 mode $sysmenu {
     bindsym h         exec --no-startup-id systemctl hibernate, mode "default"
