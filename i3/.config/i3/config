@@ -171,10 +171,10 @@ bindsym $mod+d exec --no-startup-id rofi -show run -lines 3 -font "PragmataPro 1
 set $maimode "capture: [S]crot . scrot&[U]pload . scrot2[C]lipboard . scrot[A]rea"
 bindsym $mod+Shift+Print      mode $maimode
 mode $maimode {
-    bindsym s         exec --no-startup-id "mkdir -p ~/Pictures/Screenshots && maim -m 10 ~/Pictures/Screenshots/scrot-$(date +%s).png", mode "default"
+    bindsym s         exec --no-startup-id "mkdir -p ~/Pictures/Screenshots && maim -m 10 ~/Pictures/Screenshots/scrot-$(date +%Y-%m-%d_%H-%M-%S).png", mode "default"
     bindsym u         exec --no-startup-id "mkdir -p ~/Pictures/Screenshots && maim -m 10 -s ~/Pictures/Screenshots/upload.png && imgur ~/Pictures/Screenshots/upload.png", mode "default"
     bindsym c         exec --no-startup-id "mkdir -p ~/Pictures/Screenshots && maim -m 10 -s | xclip -selection clipboard -t", mode "default"
-    bindsym a         exec --no-startup-id "mkdir -p ~/Pictures/Screenshots && maim | feh - -x & maim -m 10 -s ~/Pictures/Screenshots/cropped-$(date +%s).png", mode "default"
+    bindsym a         exec --no-startup-id "mkdir -p ~/Pictures/Screenshots && maim | feh - -x & maim -m 10 -s ~/Pictures/Screenshots/cropped-$(date +%Y-%m-%d_%H-%M-%S).png", mode "default"
     bindsym Return    mode "default"
     bindsym Escape    mode "default"
 }
@@ -339,8 +339,10 @@ set $sysmenu "system:  [P]oweroff  [H]ibernate re[B]oot  [L]ock  logou[T]"
 bindsym $mod+Shift+e      mode $sysmenu
 mode $sysmenu {
     bindsym h         exec --no-startup-id systemctl hibernate, mode "default"
-    bindsym p         exec --no-startup-id shutdown -P now
-    bindsym b         exec --no-startup-id shutdown -r now
+#    bindsym p         exec --no-startup-id shutdown -P now
+    bindsym p         exec --no-startup-id systemctl poweroff 
+#    bindsym b         exec --no-startup-id shutdown -r now
+    bindsym b         exec --no-startup-id systemctl reboot
     bindsym l         exec --no-startup-id "~/.config/i3/myblocks/lock2 -p -f Pragmata-Pro-Regular", mode "default"
     #bindsym l         exec --no-startup-id "~/.config/i3/myblocks/lock", mode "default"
     #bindsym l         exec --no-startup-id sh ~/.config/i3/i3lock.sh, mode "default"
@@ -499,6 +501,10 @@ for_window [class="Gpicview"] border none
 for_window [class="Pamac-manager"] floating enable, border none
 for_window [class="Pamac-updater"] floating enable, border none
 for_window [class="keepassx2"] floating enable
+
+# Graphic glitch fix 
+new_window none
+
 
 #Execute on startup --------------------------------------------------------------------------------------------------------
 
