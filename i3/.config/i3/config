@@ -154,7 +154,7 @@ bindsym $mod+Shift+q kill
 #bindsym $mod+d exec --no-startup-id rofi -eh 2
 
 
-bindsym $mod+d exec --no-startup-id rofi -show run -lines 3 -font "PragmataPro 16" -eh 2 -width 100 -padding 120 -opacity "80"
+bindsym $mod+d exec --no-startup-id rofi -show drun -lines 3 -font "PragmataPro 16" -eh 2 -width 100 -padding 120 -opacity "80"
 
 #bindsym $mod+d exec rofi -show run -lines 3 -font "PragmataPro 16" -eh 2 -bc "$base01" -bg "$base01" -fg "$base07" -hlbg "$base03" -hlfg "$base05" -width 100 -padding 335 -opacity "85" 
 #bindsym $mod+d exec rofi -show run -lines 3 -font "PragmataPro 16" -eh 2 -color-window "#1f222d, #1f222d, #000000" -color-normal "#1f222d, #ffffff, #101218, #7780a1, #d1d4e0" -color-active "#1f222d, #268bd2, #ffffff, #268bd2, #d1d4e0" -color-urgent "#1f222d, #dc322f, #ffffff, #dc322f, #d1d4e0" -width 100 -padding 335 -opacity "85"
@@ -183,7 +183,7 @@ mode $maimode {
 
 # Wallpaper Random Change
 #bindsym $mod+Shift+w exec "~/.config/i3/myblocks/wallpaper.sh"
-bindsym $mod+Shift+w exec --no-startup-id feh --bg-scale "$(find /usr/share/backgrounds/ -type f |sort -R |tail -1)"
+bindsym $mod+Shift+w exec --no-startup-id feh --bg-fill "$(find /usr/share/backgrounds/ -type f |sort -R |tail -1)"
 
 # Change focus
 bindsym $mod+j focus left
@@ -335,10 +335,11 @@ assign [class="mpv"] $workspace7
 assign [class="Gpicview"] $workspace6
 
 # Shutdown, Reboot, Lock Screen, and Logout #657b83 ---------------------------------------------------------------------------
-set $sysmenu "system:  [P]oweroff  [H]ibernate re[B]oot  [L]ock  logou[T]"
+set $sysmenu "[P]oweroff . [H]ibernate . [S]uspend . re[B]oot . [L]ock . logou[T]"
 bindsym $mod+Shift+e      mode $sysmenu
 mode $sysmenu {
     bindsym h         exec --no-startup-id systemctl hibernate, mode "default"
+    bindsym s         exec --no-startup-id systemctl suspend, mode "default"
 #    bindsym p         exec --no-startup-id shutdown -P now
     bindsym p         exec --no-startup-id systemctl poweroff 
 #    bindsym b         exec --no-startup-id shutdown -r now
@@ -500,7 +501,9 @@ for_window [class="Gpicview"] border none
 # Arch specific
 for_window [class="Pamac-manager"] floating enable, border none
 for_window [class="Pamac-updater"] floating enable, border none
-for_window [class="keepassx2"] floating enable
+#for_window [class="keepassx2"] floating enable
+for_window [class="(?i)keepass"] floating enable, border normal
+for_window [class="Electrum"] floating enable, border normal
 
 # Graphic glitch fix 
 new_window none
@@ -521,7 +524,7 @@ exec --no-startup-id mpd .mpd/mpd.conf
 exec --no-startup-id compton --config ~/.config/compton.conf -CGb
 
 #Set random wallpaper
-exec --no-startup-id feh --bg-scale "$(find /usr/share/backgrounds/ -type f |sort -R |tail -1)"
+exec --no-startup-id feh --bg-fill "$(find /usr/share/backgrounds/ -type f |sort -R |tail -1)"
 
 #Dropbox tray icon
 #optional command only dropbox start -i yo ucan also check dropbox status with dropbox status
