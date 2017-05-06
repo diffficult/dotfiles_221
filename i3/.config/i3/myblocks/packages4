@@ -1,7 +1,9 @@
 #!/usr/bin/bash
 
-PACKAGES=$(pacman -Qu | wc -l)
+#PACKAGES=$(pacman -Qu | wc -l)
 #PACKAGES=4
+#Check on packages and exclude [ignored] pkgs on pacman.conf
+PACKAGES=$(pacman -Qu | grep -v -c ignored)
 URGENT_VALUE=10
 FULLICON=
 SHORTICON=
