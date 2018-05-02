@@ -1,3 +1,39 @@
+!┌──────────────────────────────────────────────────────────────────────────┐
+!│▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒│
+!│▒▒┌─────┐░▒┌─────┐░▒┌──────────────┐░▒┌──────────────┐░▒┌──────────────┐░▒│
+!│▒▒│▓▒▒▒▒│░▒│▓▒▒▒▒│░▒│▓▒▒▒▒▒▒▒▒▒▒▒▒▒│░▒│▓▒▒▒▒▒▒▒▒▒▒▒▒▒│░▒│▓▒▒▒▒▒▒▒▒▒▒▒▒▒│░▒│
+!│▒▒│▓▒▒▒▒│░▒│▓▒▒▒▒│░▒│▓▒▒▒▒┌──┐▒▒▒▒▒│░▒│▓▒▒▒▒▒▒▒▒▒▒▒▒▒│░▒│▓▒┌───────────┘░▒│
+!│▒▒│▓▒▒▒▒│░▒│▓▒▒▒▒│░▒│▓▒▒▒▒│░▒│▒▒▒▒▒│░▒│▓▒▒▒▒▒▒▒▒▒▒▒▒▒│░▒│▓▒│░▒▒▒▒▒▒▒▒▒▒▒▒▒│
+!│▒▒│▓▒▒▒▒└──┘▓▒▒▒▒│░▒│▓▒▒▒▒│░▒│▒▒▒▒▒│░▒│▓▒┌───────────┘░▒│▓▒└───────────┐░▒│
+!│▒▒│▓▒▒▒▒▒▒▒▒▒▒▒▒▒│░▒│▓▒▒▒▒└──┘▒▒▒▒▒│░▒│▓▒│░▒▒▒▒▒▒▒▒▒▒▒▒▒│▓▒▒▒▒▒▒▒▒▒▒▒▒▒│░▒│
+!│▒▒│▓▒▒▒▒▒▒▒▒▒▒▒▒▒│░▒│▓▒▒▒▒▒▒▒▒▒▒▒▒┌┘░▒│▓▒└──────────┐░▒▒└───┐▓▒▒▒▒▒▒▒▒▒│░▒│
+!│▒▒└┐▒▒▒▒▒▒▒▒▒▒▒▒┌┘░▒│▓▒▒▒▒▒▒▒▒▒▒▒▒└┐░▒│▓▒▒▒▒▒▒▒▒▒▒▒▒│░▒▒▒▒▒▒│▓▒▒▒▒▒▒▒▒▒│░▒│
+!│▒▒▒│▒▒▒▒▒▒▒▒▒▒▒▒│░▒▒│▓▒▒▒▒┌──┐▓▒▒▒▒│░▒│▓▒┌──────────┘░▒▒┌─┐░│▓▒▒▒▒▒▒▒▒▒│░▒│
+!│▒▒┌┘▒▒▒▒▒▒▒▒▒▒▒▒└┐░▒│▓▒▒▒▒│░▒│▓▒▒▒▒│░▒│▓▒│░▒▒▒▒▒▒▒▒▒▒▒▒▒│▓│░│▓▒▒▒▒▒▒▒▒▒│░▒│
+!│▒▒│▓▒▒▒▒▒▒▒▒▒▒▒▒▒│░▒│▓▒▒▒▒│░▒│▓▒▒▒▒│░▒│▓▒│░▒▒▒▒▒▒▒▒▒▒▒▒▒│▓│░│▓▒▒▒▒▒▒▒▒▒│░▒│
+!│▒▒│▓▒▒▒▒┌──┐▓▒▒▒▒│░▒│▓▒▒▒▒│░▒│▓▒▒▒▒│░▒│▓▒└───────────┐░▒│▓└─┘▓▒▒▒▒▒▒▒▒▒│░▒│
+!│▒▒│▓▒▒▒▒│░▒│▓▒▒▒▒│░▒│▓▒▒▒▒│░▒│▓▒▒▒▒│░▒│▓▒▒▒▒▒▒▒▒▒▒▒▒▒│░▒│▓▒▒▒▒▒▒▒▒▒▒▒▒▒│░▒│
+!│▒▒└─────┘░▒└─────┘░▒└─────┘░▒└─────┘░▒└──────────────┘░▒└──────────────┘░▒│
+!│▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒│
+!└──┐┌──┐▒┌┐▓▒▒▒▒▒▒┌───┐┌┐┌┐▓▒▒▒▒▒▒▒▒┌──┐▓▒▒┌────┐┌┐▓▒▒┌───┐▓▒▒▒▒▒▒▒┌───────┘
+!   ││  │▒│└────┐▓▒│   ││││└────┐▓▒┌─┘  │▒▒▒│    │││▓▒▒│   │▓▒▒▒▒▒▒▒│▒▒▒▒
+!   ││  │▒│     │▓▒│   ││││ ▓▒▒▒│▓▒│    │▒▒▒│     │└┐▓▒│   │▓▒▒▒▒▒▒▒│▒
+!   ││  │▒│     │┌─┘   ││││ ▓   │▓▒│    │▒▒▒│     │ │▓▒│   │▓▒▒▒▒▒▒▒│▒
+!   ││  │▒│     ││▒    ││└┘     │▓▒│    │▒┌─┘       │▓┌┘   │▓▒▒▒▒▒▒▒│
+!   ││  │▓│     ││▒    ││       │▓▒│    │▒│         │▓│    │▓▒▒▒▒▒▒▒│
+!   ││  │▓│     ││     ││   ▓   │▓▒│    └┬┘         │▓│    │▓▒▒▒▒▒▒▒│
+!   ││  └─┘     ││     └┘       │▓▒│     │          │▓│    │▓▒▒▒▒▒▒▒│
+!   ││  ┌─┐     └┘▒      ┌┐     └┬┬┘                └─┘    └┬─┬┬─┬┬┬┘
+!   ││  │▒│              ││      ││                           ││▓│││
+!   └┘  │▓│       ▓      ││       │      │           ▒      │ ││  │
+!       └─┘              └┘                                   │   │
+!   ┌┐  ┌─┐            ┌┐         │                  ▒           │
+!   └┘  │▓│       ▓    ││                                     │
+!   ┌┐  └─┘            ││                                       ▓
+!   └┘                 └┘                                     │  │
+!                                                             │
+!
+!                                                           │
 !-------------------------------------------------------------------------------
 ! Xft settings
 !-------------------------------------------------------------------------------
@@ -8,28 +44,20 @@ Xft.rgba: 					rgb
 Xft.hinting: 				true
 Xft.hintstyle: 				hintfull
 Xft.lcdfilter: 				lcddefault
-Xcursor.theme:				OSX-ElCap
-
+Xcursor.theme:				Paper
 
 URxvt*depth:                32
 URxvt*geometry:             90x30
-! URxvt.transparent:          true
-! URxvt.fading:               85
-URxvt*background:				#030508
-! URxvt.background:			rgba:0000/0000/0000/aaaa
-! URxvt.background:			rgba:0000/0000/0200/c800
-! URxvt.urgentOnBell:         true
-! URxvt.visualBell:           true
+URxvt*background:			#030508
 URxvt*loginShell:           true
 URxvt*saveLines:            1000
 URxvt*internalBorder:       3
 URxvt*lineSpace:            0
 
-
 ! Fonts
-URxvt*allow_bold:           false
-URxvt*font:     xft:Tewi:size=8
-URxvt*boldFont: xft:Tewi:medium:size=8
+URxvt*font:xft:scientifica:size=8
+URxvt*boldFont:xft:scientifica:bold:size=8
+URxvt*allow_bold:           true
 
 ! Fix font space
 URxvt*letterSpace: 1
@@ -43,78 +71,82 @@ URxvt*scrollWithBuffer: true
 
 ! Perl extensions
 URxvt*perl-lib:         /usr/lib/urxvt/perl/
-URxvt.perl-ext-common:	default,clipboard,keyboard-select,matcher
+URxvt.perl-ext-common:	default,matcher,clipboard,keyboard-select
+
+! Clickable URLs
 URxvt.url-launcher: /usr/bin/chromium
 URxvt.matcher.button: 1
 URxvt.underlineURLs:  True
 URxvt.colorUL:	#86a2be
 
+! Use Control-Shift-V/C for X clipboard
+URxvt.iso14755: false
+URxvt.keysym.Shift-Control-V: eval:paste_clipboard
+URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
+
+! Cursor
+! URxvt.cursorBlink:          true
+! URxvt.cursorColor:          #657b83
+! URxvt.cursorUnderline:      false
 
 ! Pointer
 URxvt*pointerBlank:         true
 
 ! special
-*.foreground: 	#b3b8c4
-*.background:	#20242c
-*.cursorColor:  #98d1ce
+*.foreground:   #b3b8c4
+*.background:   #20242c
+*.cursorColor:  #b3b8c4
 
 ! black
-*.color0:       #151515
-*.color8:       #666666
+*.color0:       #213146
+*.color8:       #505354
 
 ! red
-*.color1:       #ff005b
-*.color9:       #ff00a0
+*.color1:       #f91930
+*.color9:       #ff1b6d
 
 ! green
-*.color2:       #60ff00
-*.color10:      #b1e318
+*.color2:       #32f51c
+*.color10:      #93ea00
 
 ! yellow
-*.color3:       #ffe755
-*.color11:      #ff9f00
+*.color3:       #f4fd22
+*.color11:      #ff6600
 
 ! blue
-*.color4:       #048ac7
-*.color12:      #48c6ff
+*.color4:       #2757d6
+*.color12:      #3f78ff
 
 ! magenta
-*.color5:       #833c9f
-*.color13:      #be67e1
+*.color5:       #8c54fe
+*.color13:      #9e6ffe
 
 ! cyan
-*.color6:       #0ac1cd
-*.color14:      #63e7f0
+*.color6:       #38c8b5
+*.color14:      #23cfd5
 
 ! white
-*.color7:       #e4e4e4
-*.color15:      #f3f3f3
+*.color7:       #ccccc6
+*.color15:      #f8f8f2
 
 
-! SETTINGS
-URxvt*secondaryScroll: True
-URxvt*cursorUnderline: False
-URxvt*cursorColor: #D3D3D3
-URxvt*cursorBlink: True
-URxvt*underlineColor: #181818
+! TABS COLOURS
+! URxvt.color0  : #979797
+! URxvt.color1  : #000000
 
-
-! ------------------------------------------------------------------------------
-! ROFI
-! ------------------------------------------------------------------------------
-!rofi.modi: run
-!rofi.font: PragmataPro 16
-!rofi.width: 100
-!rofi.padding: 120
-!rofi.lines: 3
-!rofi.columns: 1
-!rofi.opacity: 80
 
 ! ------------------------------------------------------------------------------
 ! ROFI Color theme
 ! ------------------------------------------------------------------------------
-rofi.color-enabled: true
-rofi.color-window: #1f222d, #1f222d, #000000
-rofi.color-normal: #1f222d, #a6d1fa, #383c4a, #7780a1, #d1d4e0
-rofi.color-active: #1f222d, #268bd2, #383c4a, #268bd2, #d1d4e0
-rofi.color-urgent: #1f222d, #dc322f, #383c4a, #dc322f, #d1d4e0
+rofi.color-enabled:				true
+rofi.separator-style:			solid
+!rofi.hide-scrollbar: 			true
+!rofi.color-normal:				argb:BF383c4a, #c4cbd4, argb:BF404552, #4084d6, #d1d4e0
+!rofi.color-urgent:				argb:BF2d303b, #cc6666, argb:BF2d303b, #a54242, #d1d4e0
+!rofi.color-active:				argb:BF2d303b, #b5bd68, argb:BF2d303b, #8c9440, #d1d4e0
+!rofi.color-window:				argb:BF2d303b, #7c8389, #1d1f21
+
+rofi.color-window: argb:BF1f222d, #1f222d, #000000
+rofi.color-normal: argb:BF1f222d, #a6d1fa, argb:BF383c4a, #7780a1, #d1d4e0
+rofi.color-active: argb:BF1f222d, #268bd2, argb:BF383c4a, #268bd2, #d1d4e0
+rofi.color-urgent: argb:BF1f222d, #dc322f, argb:BF383c4a, #dc322f, #d1d4e0
