@@ -1,13 +1,9 @@
 #!/usr/bin/bash
 
 #PACKAGES=$(pacman -Qu | wc -l)
-#PACKAGES=4
-<<<<<<< HEAD
-#Packages count exludes any pkg on pacman.conf that is ignored
-=======
-#Check on packages and exclude [ignored] pkgs on pacman.conf
->>>>>>> 9280de0df6d6fa6939b4bbfe910f511d26b39bd1
+#counts lines and ignores lines with [ignored] packages
 PACKAGES=$(pacman -Qu | grep -v -c ignored)
+#PACKAGES=4
 URGENT_VALUE=10
 FULLICON=
 SHORTICON=
