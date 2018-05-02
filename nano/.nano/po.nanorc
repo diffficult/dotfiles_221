@@ -1,7 +1,8 @@
-syntax "po" "\.pot?$"
+syntax "PO" "\.pot?$"
 
-KEYWORD:  "\<(msgid|msgstr)\>"
-+STRING
-ESCAPE:   "\\.?"
-+HASHCOMMENT
-+LINT
+color cyan  "\<(msgid|msgstr)\>"
+color yellow ""(\\.|[^"])*"|'(\\.|[^'])*'"
+color magenta   "\\.?"
+color brightblack "(^|[[:space:]])#([^{].*)?$"
+color ,green "[[:space:]]+$"
+color ,red "	+ +| +	+"

@@ -1,9 +1,10 @@
-syntax "patch" "\.(patch|diff)$"
-
+## Here is an example for patch files.
+##
+syntax "Patch" "\.(patch|diff)$"
 color brightgreen "^\+.*"
 color green "^\+\+\+.*"
+color brightblue "^ .*"
 color brightred "^-.*"
 color red "^---.*"
-color blue "^@@.*"
+color brightyellow "^@@.*"
 color magenta "^diff.*"
-

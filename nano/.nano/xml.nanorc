@@ -1,11 +1,14 @@
-syntax "xml" "\.([jrs]html?|sgml?|xml|opml|xslt?|plist)$"
-header "<\?xml"
+## Here is an example for xml files.
+##
 
-SECTION:  start="<" end=">"
-KEYWORD:  " [a-z_-]+="
-+STRING
-WARNING:  "&"
-ESCAPE:   "&(#[0-9]+|#x[0-9a-fA-F]+|[A-Za-z][A-Za-z0-9]*);"
-COMMENT:  start="<!--" end="-->"
-COMMENT:  start="<!DOCTYPE" end=">"
-+LINT
+syntax "XML" ".*\.([jrs]?html?|xml|sgml?|rng)$"
+color white "^.+$"
+color green  start="<" end=">"
+color cyan   "<[^> ]+"
+color cyan   ">"
+color yellow start="<!DOCTYPE" end="[/]?>"
+color yellow start="<!--" end="-->"
+color red    "&[^;]*;"
+
+## Trailing spaces
+color ,green "[[:space:]]+$"
