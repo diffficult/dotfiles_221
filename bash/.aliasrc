@@ -1,5 +1,3 @@
-
-
 ####################
 ##### SYSTEM #######
 ####################
@@ -643,6 +641,7 @@ elif [ "$PKMGR" = "pacaur" ]; then
   pkm-search-local() { pacaur -Qs "$@" ;}
   pkm-upgrade() { pacaur -Syu ;}	# upgrade everything except aur package
   pkm-upgrade-aur() { pacaur --noconfirm -Sbua ;} # only upgrade aur package
+  pkm-list-upgraded() { cat /var/log/pacman.log | grep -i upgraded ;} # list latest upgraded packages 
 # }}}
 # {{{ pacman
 elif [ "$PKMGR" = "pacman" ]; then
@@ -677,6 +676,7 @@ elif [ "$PKMGR" = "pacman" ]; then
   pkm-search() { pacman -Ss "$@" ;}
   pkm-search-local() { pacman -Qs "$@" ;}
   pkm-upgrade() { sudo pacman -Syu ;}
+  pkm-list-upgraded() { cat /var/log/pacman.log | grep -i upgraded ;} # list latest upgraded packages 
 # }}}
 # {{{ rug
 elif [ "$PKMGR" = "rug" ]; then
@@ -721,6 +721,7 @@ elif [ "$PKMGR" = "yaourt" ]; then
   pkm-search-local() { yaourt -Qs "$@" ;}
   pkm-upgrade() { yaourt -Syu ;}	# upgrade everything except aur package
   pkm-upgrade-aur() { yaourt --noconfirm -Sbua ;} # only upgrade aur package
+  pkm-list-upgraded() { cat /var/log/pacman.log | grep -i upgraded ;} # list latest upgraded packages 
 # }}}
 # {{{ yum
 elif [ "$PKMGR" = "yum" ]; then
@@ -1193,4 +1194,3 @@ detox-video() {
 }
 
 # }}}
-
